@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset='utf-8'>
+  <title>Simple Quiz</title>
+
+  <style>
+h1 {
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: gray;
+	color: white;
+}
+
+h3 {
+	width: 20%;
+	text-align: center;
+	padding-left: 40%;
+	padding-right: 40%; 
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	background-color: blue;
+}
+
+  </style>
+
+
+
+</head>
+
+<body>
+<h1 class="header">Simple Quiz</h1>
+
+<h3 id="score">
+</h3>
+
+
+
+
+
+
+  <script type="text/javascript">
+  var questions = ['What is the largest lake in North America?', 'Who invented the light bulb?', 'What is 2 + 2?'];
+  var answers = ['Lake Superior', 'Thomas Edison' , '4'];
+
+
+  var score = 0;
+
+  var i = 0;
+  while (i < 3) {
+
+  	var answer = prompt(questions[i]);
+
+  	if (answer == answers[i]) {
+  		score = score + 1;
+  		alert('correct');
+
+}
+	else {
+		alert('sorry, the correct answer is ' + answers[i])
+	}
+	i = i +1;
+}
+
+document.getElementById("score").innerHTML = 'You got ' + score + ' out of 3 questions right!'   
+
+
+  </script>
+
+
+</body>
+
+</html>
